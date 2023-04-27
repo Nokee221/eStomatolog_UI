@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class ClinicDetailScreen extends StatefulWidget {
   const ClinicDetailScreen({super.key});
@@ -10,6 +12,7 @@ class ClinicDetailScreen extends StatefulWidget {
 }
 
 class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
+  bool isSelected = false;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -17,11 +20,15 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
         body: Stack(
           children: [
             SizedBox(
+              height: 400,
               width: double.infinity,
-              child: Image.asset('assets/images/klinika3.jpg'),
+              child: Image.asset(
+                'assets/images/klinika3.jpg',
+                fit: BoxFit.cover,
+              ),
             ),
             buttonArrow(context),
-            scroll(),
+            scroll(isSelected),
           ],
         ),
       ),
@@ -62,10 +69,10 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
     );
   }
 
-  scroll() {
+  scroll(bool isSelected) {
     return DraggableScrollableSheet(
       initialChildSize: 0.6,
-      maxChildSize: 1.0,
+      maxChildSize: 0.7,
       minChildSize: 0.6,
       builder: (context, scrollController) {
         return Container(
@@ -96,9 +103,132 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
                   ),
                 ),
                 const Text(
-                  "Cacao Maca Walnut Milk",
-                  style: TextStyle(color: Colors.black , fontSize: 25 , fontWeight: FontWeight.bold),
+                  "Stomatološka Ordinacija Adem",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 ),
+                const SizedBox(
+                  height: 5,
+                ),
+                const Text(
+                  "Mejdandzik 3 T8",
+                  style: TextStyle(color: Colors.black, fontSize: 15),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                RatingBar.builder(
+                  initialRating: 4.5,
+                  minRating: 1,
+                  direction: Axis.horizontal,
+                  allowHalfRating: true,
+                  itemCount: 5,
+                  itemSize: 24,
+                  itemPadding: const EdgeInsets.symmetric(horizontal: 5.0),
+                  itemBuilder: (context, _) => const Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                  ),
+                  onRatingUpdate: (rating) {
+                    print(rating);
+                  },
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 15),
+                  child: Divider(
+                    height: 4,
+                  ),
+                ),
+                const Text(
+                  "Opis",
+                  style: TextStyle(fontSize: 20),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText2!
+                      .copyWith(color: Colors.black),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 15),
+                  child: Divider(
+                    height: 4,
+                  ),
+                ),
+                const Text(
+                  "Naši doktori",
+                  style: TextStyle(fontSize: 20),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 50,
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: FilterChip(
+                          label: const Text("Vađenje zuba"),
+                          selected: isSelected,
+                          onSelected: (bool value) {
+                            setState(() {
+                              isSelected = !isSelected;  
+                            });
+                            
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: CircleAvatar(
+                        radius: 30,
+                        backgroundColor: Colors.blue.withOpacity(0.9),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.face_5,
+                            size: 30,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: CircleAvatar(
+                        radius: 30,
+                        backgroundColor: Colors.blue.withOpacity(0.9),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.face_5,
+                            size: 30,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),

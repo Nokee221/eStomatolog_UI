@@ -19,8 +19,8 @@ List<Menu> bottomNavItems = [
     title: "Search",
     rive: RiveModel(
         src: "assets/RiveAssetsIcons/icons.riv",
-        artboard: "SEARCH",
-        stateMachineName: "SEARCH_Interactivity"),
+        artboard: "BELL",
+        stateMachineName: "BELL_Interactivity"),
   ),
   Menu(
     title: "Profile",

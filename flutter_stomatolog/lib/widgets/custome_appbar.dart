@@ -28,7 +28,7 @@ class CustomeAppBarWidget extends StatelessWidget with PreferredSizeWidget{
                 
               },
               icon: const Icon(
-                Icons.man,
+                Icons.search,
                 size: 17,
                 color: Colors.black,
               ),
