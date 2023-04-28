@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stomatolog/screens/animated_onboding_screen.dart';
 import 'package:flutter_stomatolog/screens/login_screen.dart';
 import 'package:flutter_stomatolog/screens/onbording_screen.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const OnbodingScreen(),
     );
   }
 }

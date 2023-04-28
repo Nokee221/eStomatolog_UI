@@ -71,8 +71,13 @@ flutter:
     - assets/images/klinika1.jpg
     - assets/images/klinika2.jpg
     - assets/images/klinika3.jpg
+    - assets/images/Spline.png
     - assets/RiveAssetsIcons/house.riv
     - assets/RiveAssetsIcons/icons.riv
+    - assets/RiveAssetsIcons/shapes.riv
+    - assets/RiveAssetsIcons/button.riv
+    - assets/RiveAssetsIcons/3d-button.riv
+    - assets/RiveAssetsIcons/sign_up_rive_button.riv
     
 
 

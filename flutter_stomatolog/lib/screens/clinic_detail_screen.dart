@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+import 'doctor_detail_screen.dart';
+
 class ClinicDetailScreen extends StatefulWidget {
   const ClinicDetailScreen({super.key});
 
@@ -44,10 +46,10 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
         },
         child: Container(
           clipBehavior: Clip.hardEdge,
-          height: 55,
-          width: 55,
+          height: 35,
+          width: 35,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25),
+            borderRadius: BorderRadius.circular(20),
           ),
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
@@ -183,9 +185,8 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
                           selected: isSelected,
                           onSelected: (bool value) {
                             setState(() {
-                              isSelected = !isSelected;  
+                              isSelected = !isSelected;
                             });
-                            
                           },
                         ),
                       );
@@ -205,7 +206,7 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
                         child: IconButton(
                           onPressed: () {},
                           icon: const Icon(
-                            Icons.face_5,
+                            Icons.face,
                             size: 30,
                             color: Colors.black,
                           ),
@@ -218,9 +219,16 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
                         radius: 30,
                         backgroundColor: Colors.blue.withOpacity(0.9),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const DoctorDetailScreen(),
+                              ),
+                            );
+                          },
                           icon: const Icon(
-                            Icons.face_5,
+                            Icons.face,
                             size: 30,
                             color: Colors.black,
                           ),
