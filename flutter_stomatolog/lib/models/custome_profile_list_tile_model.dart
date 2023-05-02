@@ -34,7 +34,7 @@ List<CustomListTile> customListTiles = [
     isLogOut: false,
   ),
   CustomListTile(
-    title: "Logout",
+    title: "Odjava",
     icon: CupertinoIcons.arrow_right_arrow_left,
     isLogOut: true,
   ),
