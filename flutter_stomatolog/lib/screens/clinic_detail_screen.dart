@@ -19,13 +19,15 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        
+        backgroundColor: Colors.red,
         body: Stack(
           children: [
             SizedBox(
               height: 400,
               width: double.infinity,
               child: Image.asset(
-                'assets/images/klinika3.jpg',
+                'assets/images/klinika2.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -75,6 +77,7 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
     return Padding(
       padding: const EdgeInsets.only(top: 280),
       child: Container(
+        height: 600,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: const BoxDecoration(
           color: Colors.white,
@@ -216,7 +219,7 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
                       backgroundColor: Colors.blue.withOpacity(0.9),
                       child: IconButton(
                         onPressed: () {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (_) => const DoctorDetailScreen(),

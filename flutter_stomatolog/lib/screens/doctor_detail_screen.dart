@@ -29,8 +29,8 @@ class _DoctorDetailScreenState extends State<DoctorDetailScreen> {
               height: double.infinity,
               width: double.infinity,
               padding: const EdgeInsets.all(8.0),
-              decoration: const BoxDecoration(
-                color: Colors.white,
+              decoration:  BoxDecoration(
+                color: Colors.grey[100],
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
@@ -51,7 +51,8 @@ class _DoctorDetailScreenState extends State<DoctorDetailScreen> {
                       ),
                       const Text(
                         "Opis",
-                        style: TextStyle(fontSize: 20 , fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
                         height: 10,
@@ -70,25 +71,19 @@ class _DoctorDetailScreenState extends State<DoctorDetailScreen> {
                         ),
                       ),
                       Text(
-                    "Usloge",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: 3,
-                    itemBuilder: (context, index) => ingredients(context),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 15),
-                    child: Divider(
-                      height: 4,
-                    ),
-                  ),
-
+                        "Usloge",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      ListView.builder(
+                        physics: NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: 3,
+                        itemBuilder: (context, index) => ingredients(context),
+                      ),
                     ],
                   ),
                 ),
@@ -147,7 +142,6 @@ class _DoctorDetailScreenState extends State<DoctorDetailScreen> {
         label: Text("Rezervši svoj termin"),
         icon: Icon(Icons.arrow_right),
         onPressed: () {},
-        
       ),
     );
   }

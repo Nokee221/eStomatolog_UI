@@ -56,20 +56,139 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: TextField(
                 controller: usernameController,
-                obscureText: true,
+                obscureText: false,
                 decoration: InputDecoration(
-                    enabledBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey.shade400),
-                    ),
-                    fillColor: Colors.grey.shade200,
-                    filled: true,
-                    hintText: "Username",
-                    hintStyle: TextStyle(color: Colors.grey[500])),
+                  enabledBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey.shade400),
+                  ),
+                  fillColor: Colors.grey.shade200,
+                  filled: true,
+                  hintText: "Korisničko ime",
+                  hintStyle: TextStyle(color: Colors.grey[500]),
+                ),
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: TextField(
+                controller: passwordController,
+                obscureText: true,
+                decoration: InputDecoration(
+                  enabledBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey.shade400),
+                  ),
+                  fillColor: Colors.grey.shade200,
+                  filled: true,
+                  hintText: "Lozinka",
+                  hintStyle: TextStyle(color: Colors.grey[500]),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'Zaboravili ste šifru?',
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            GestureDetector(
+              onTap: () {
+                print("Login");
+                Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const HomePage(),
+                            ),
+                          );
+              },
+              child: Container(
+                padding: const EdgeInsets.all(25),
+                margin: const EdgeInsets.symmetric(horizontal: 25),
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Center(
+                  child: Text(
+                    "Prijavi se",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[400],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Text(
+                      'Ili nastavi sa',
+                      style: TextStyle(color: Colors.grey[700]),
+                    ),
+                  ),
+                  Expanded(
+                    child: Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[400],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Niste član?',
+                  style: TextStyle(color: Colors.grey[700]),
+                ),
+                const SizedBox(width: 4),
+                const Text(
+                  'Registrujte se',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
