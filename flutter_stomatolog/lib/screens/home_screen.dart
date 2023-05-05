@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.grey[300],
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 70),
+            padding: const EdgeInsets.symmetric(vertical: 50),
             child: Column(
               children: [
                 Container(

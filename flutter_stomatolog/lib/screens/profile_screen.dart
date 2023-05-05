@@ -12,6 +12,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -68,8 +69,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               height: 45,
                               width: 45,
                               decoration: BoxDecoration(
-                                color:tile.isLogOut ? Colors.red.withOpacity(0.8) : Colors.blue.withOpacity(0.8),
-                                borderRadius: BorderRadius.circular(18),
+                                color: tile.isLogOut
+                                    ? Colors.red.withOpacity(0.8)
+                                    : Colors.blue.withOpacity(0.8),
+                                borderRadius: BorderRadius.circular(5),
                               ),
                             ),
                             title: Text(

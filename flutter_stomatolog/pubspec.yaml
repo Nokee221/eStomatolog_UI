@@ -72,6 +72,9 @@ flutter:
     - assets/images/klinika2.jpg
     - assets/images/klinika3.jpg
     - assets/images/Spline.png
+    - assets/images/doctor_wallpaper.jpg
+    - assets/images/google.png
+    - assets/images/apple-logo.png
     - assets/RiveAssetsIcons/house.riv
     - assets/RiveAssetsIcons/icons.riv
     - assets/RiveAssetsIcons/shapes.riv

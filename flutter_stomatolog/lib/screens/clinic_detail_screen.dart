@@ -19,7 +19,6 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        
         backgroundColor: Colors.red,
         body: Stack(
           children: [
@@ -75,9 +74,9 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
 
   scroll(bool isSelected) {
     return Padding(
-      padding: const EdgeInsets.only(top: 280),
+      padding: const EdgeInsets.only(top: 200),
       child: Container(
-        height: 600,
+        height: 700,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: const BoxDecoration(
           color: Colors.white,
@@ -144,7 +143,7 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
               ),
               const Text(
                 "Opis",
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 20 , fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 10,
@@ -164,7 +163,7 @@ class _ClinicDetailScreenState extends State<ClinicDetailScreen> {
               ),
               const Text(
                 "Naši doktori",
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 20 , fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 5,

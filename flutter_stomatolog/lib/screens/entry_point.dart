@@ -62,8 +62,8 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
-      resizeToAvoidBottomInset: false,
+      // extendBody: true,
+      // resizeToAvoidBottomInset: false,
       body: _pages[_selectedIndex],
       bottomNavigationBar: Transform.translate(
         offset: Offset(0, 100 * animation.value),
@@ -71,10 +71,10 @@ class _HomePageState extends State<HomePage>
           child: Container(
             padding:
                 const EdgeInsets.only(left: 12, top: 12, right: 12, bottom: 12),
-            margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
             decoration: BoxDecoration(
               color: Colors.blue.withOpacity(0.8),
-              borderRadius: const BorderRadius.all(Radius.circular(24)),
+              borderRadius: const BorderRadius.all(Radius.circular(0)),
               boxShadow: [
                 BoxShadow(
                   color: Colors.blue.withOpacity(0.3),

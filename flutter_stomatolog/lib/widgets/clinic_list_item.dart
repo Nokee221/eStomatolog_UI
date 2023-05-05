@@ -24,7 +24,7 @@ class ClinicListItem extends StatelessWidget {
           
           aspectRatio: 16 / 9,
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(5),
             child: Stack(
               children: [
                 Flow(
