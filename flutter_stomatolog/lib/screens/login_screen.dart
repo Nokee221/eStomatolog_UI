@@ -10,8 +10,8 @@ class LoginScreen extends StatefulWidget {
 
   static Route route() {
     return MaterialPageRoute(
-        settings: RouteSettings(name: routeName),
-        builder: (context) => LoginScreen());
+        settings: const RouteSettings(name: routeName),
+        builder: (context) => const LoginScreen());
   }
 
   @override
@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 //   "Prijava",
                 //   style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                 // ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Padding(
@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Padding(
@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 GestureDetector(

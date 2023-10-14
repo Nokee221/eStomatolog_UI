@@ -29,7 +29,7 @@ class ClinicListItem extends StatelessWidget {
               children: [
                 Flow(
                   delegate: _ParallaxFlowDelegate(
-                    scrollable: Scrollable.of(context)!,
+                    scrollable: Scrollable.of(context),
                     listItemContext: context,
                     backgroundImageKey: backgroundImageKey,
                   ),
